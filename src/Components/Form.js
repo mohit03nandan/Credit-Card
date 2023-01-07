@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import './Form.css'; 
+import { ToastContainer ,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = (props) => {
 
@@ -33,6 +35,7 @@ const Form = (props) => {
         setCardCvv('')
     }
 
+    
   function validation(){
     
     
@@ -46,12 +49,16 @@ const Form = (props) => {
         wipe();
     }
 
+    if(CardNumber.length === 16 && CardCvv.length === 3){
+        toast.success('Data updated successfuly !', {
+            position: toast.POSITION.TOP_CENTER,
+          });
+    }
     
   }
 
     function FormSubmit(e){
         e.preventDefault();
-        // console.log("formjs",CardName, CardNumber, CardMonth, CardCvv);
         props.pullData({
             Name: CardName,
             Number: CardNumber, 
@@ -60,6 +67,8 @@ const Form = (props) => {
         })
         wipe();
     }
+
+
 
   return (
     <div>
@@ -92,15 +101,16 @@ const Form = (props) => {
                         <input className="form-control mb-3 pt-2 " value={CardCvv} onChange={cvv} type="password" placeholder="***" required/>
                     </div>
                 </div>
-                <div className="col-12">
-                    <button className="btn btn-primary btn-outline-primary mb-3" type='submit' onClick={validation}>     
+                <div className="col-12" >
+                    <button className="btn btn-primary btn-outline-primary mb-3" type='submit' onClick={validation} >     
                           pay
-                        <span className="fas fa-arrow-right"></span>
+                        <span className="fas fa-arrow-right" ></span>
                     </button>
                 </div>
             </div>
         </div>
     </div>
+    <ToastContainer />
 </form>
     </div>
   )

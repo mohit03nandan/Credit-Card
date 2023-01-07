@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Card.css"
 
+
 const Card = (props) => {
 
  var Name;    
@@ -23,9 +24,13 @@ else{
 }
 
 
+
+
+
+
   return (
-    <div>
-        <div class='card-1'>
+    <div >
+        <div class='card-1' >
               <div class='top-block'>
                 <div class='card-chip'>
                   <i class="icon-credit-card icon-3x"></i>
@@ -52,7 +57,6 @@ else{
               </div>
          </div>
       </div>
-
     </div>
   )
 }

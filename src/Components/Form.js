@@ -51,12 +51,12 @@ const Form = (props) => {
 
     function FormSubmit(e){
         e.preventDefault();
-        console.log(CardName, CardNumber, CardMonth, CardCvv);
-        props.setCardData({
+        // console.log("formjs",CardName, CardNumber, CardMonth, CardCvv);
+        props.pullData({
             Name: CardName,
             Number: CardNumber, 
             Month: CardMonth,
-            Cvc: CardCvv
+            Cvv: CardCvv
         })
         wipe();
     }
@@ -83,7 +83,7 @@ const Form = (props) => {
                 <div className="col-6">
                     <div className="d-flex flex-column">
                         <p className="text mb-1">Expiry</p>
-                        <input className="form-control mb-3" value={CardMonth} onChange={cardMonth} type="number" placeholder="MM/YYYY" required/>
+                        <input className="form-control mb-3" value={CardMonth} onChange={cardMonth} type="number" placeholder="MMYYYY" required/>
                     </div>
                 </div>
                 <div className="col-6">

@@ -1,0 +1,64 @@
+.card-1 {
+    height: 310px;
+    width: 500px;
+    margin-right: 200px;
+    background-image:linear-gradient(rgb(218, 196, 196),rgba(226, 72, 72, 0.8));
+    border-radius: 20px;
+    color:white;
+    margin:20px;
+    font-size: 16px;
+    box-shadow: 2px 2px 20px #707070;
+
+  }
+
+  .top-block {
+    display: inline-block;
+    width:500px;
+    height:155px;
+  }
+   .bottom-block {
+    display: inline-block;
+    width:500px;
+    height:155px;
+  }
+
+  .card-chip {
+    float:left;
+    margin: 20px;
+  }
+  .card-name {
+    float:right;
+    margin:20px;
+    position:relative;
+    font-size: 30px;
+    font-weight:550;
+  }
+
+  .balance {
+    float:left;
+    margin: 20px;
+    position:relative;
+    top:5px;
+
+  }
+  .card-balance {
+    font-weight:00;
+    font-size: 20px;
+    margin-top:20px;
+  }
+  .card-icon {
+    float:right;
+    margin: 0 20px 0 0;
+    margin-top:75px;
+  }
+  .circle-left {
+    margin-right: -15px;
+    opacity:0.7;
+  }
+
+  .card-number {
+    font-size: 20px;
+    margin: -15px 0 0 0;
+    text-align-last: center; 
+  }
+ 
